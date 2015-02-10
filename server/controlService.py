@@ -53,6 +53,13 @@ httpd = BaseHTTPServer.HTTPServer(('localhost', 4443), SimpleHTTPServer.SimpleHT
 httpd.socket = ssl.wrap_socket (httpd.socket, certfile='path/to/localhost.pem', server_side=True)
 httpd.serve_forever()
 
+def getValue(key,s):
+    for x in s.split('&')
+        if (x.split('=')[0] == key):
+            tmp = x.split('=')[1]
+            break
+    return ' '.join(tmp.split('+'))
+
 
 
 
